@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000; /* Черный фон */
+}
+
+header {
+    position: relative;
+    height: 80vh; /* Высота header на весь экран */
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+.video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Высота контейнера - 100% экрана */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Скрыть лишнее */
+}
+
+video {
+    width: 100%;
+    height: 100%; /* Видео на всю высоту контейнера */
+    object-fit: cover; /* Видео заполняет контейнер */
+    object-position: top; /* Обрезка сверху */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    z-index: 1;
+}
+
+h1 {
+    position: absolute;
+    z-index: 2;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    color: white;
+    margin: 0;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.no-underline {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: inherit; /* Задает цвет ссылок таким же, как окружающий текст */
+    display: block; /* Делает весь контейнер кликабельным */
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    gap: 10px;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.6s ease; /* Добавляем плавное увеличение */
+}
+
+.section:hover {
+    transform: scale(1.02); /* Увеличиваем ячейку на 5% при наведении */
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    border-radius: 8px;
+}
+
+
+.icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    filter: invert(1);
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: normal;
+    z-index: 2;
+}
+.volunteers {
+    background-image: url('../data_main/photos on icons/photo1.jpg'); /* Путь к изображению */
+}
+
+.personal-cabinet {
+    background-image: url('../data_main/photos on icons/photo2.jpg');
+}
+
+.organization {
+    background-image: url('../data_main/photos on icons/photo3.jpg');
+}
+
+.news {
+    background-image: url('../data_main/photos on icons/photo4.jpg');
+}
+
+.directions {
+    background-image: url('../data_main/photos on icons/photo5.jpg');
+}
+
+.about {
+    background-image: url('../data_main/photos on icons/photo6.jpg');
+}
+
+.training {
+    background-image: url('../data_main/photos on icons/photo7.jpg');
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.left-column, .center-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.left-column {
+    width: 25%; 
+}
+
+.center-column {
+    width: 48%; 
+}
+
+.right-column {
+    width: 25%;  
+}
+
+.volunteers, .personal-cabinet, .organization {
+    height: 195px; 
+}
+
+.news, .directions, .about, .training {
+    height: 300px; 
+}
+
+h2.section-title {
+    color: #2980b9;
+    margin-top: 30px;
+}
+
+
+footer {
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    height: 200px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border-top: 1px solid #ccc;
+}
+
