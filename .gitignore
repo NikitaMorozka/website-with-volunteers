@@ -1,0 +1,8 @@
+# Игнорировать все файлы .DS_Store
+.DS_Store
+# Игнорировать папку .vs (Visual Studio)
+.vs/
+#Игнорировать все файлы в папке project_main, связанные с DS_Store
+project_main/.DS_Stor
+# Игнорировать папку с данными и иконками
+project_main/data_main/.DS_Store
